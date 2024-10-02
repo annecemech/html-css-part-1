@@ -6,24 +6,21 @@
 
 ## Les divisions
 ### Le cadre
-Nous souhaitons créer un cadre avec un fond vert autour de chaque section. Pour cela nous avons besoin d'une nouvelle balise : la balise division ```<div></div>```. Par exemple pour la 1ère section :
+Nous souhaitons encadrer le titre principal avec un bleu foncé. Pour cela nous avons besoin d'une nouvelle balise : la balise division ```<div></div>```. Par exemple pour cette section :
 
 #### HTML (l.10-16)
 ```html
- <div>
-   <h1>Les Muffins de Grand Mère</h1>
-   <h2>Fondants et croustillants</h2>
-   <img src="images/muffin.jpg" alt="muffin">
-   <br>
-   <a href="https://www.marmiton.org/recettes/recette_muffins-tres-simples_166385.aspx">En savoir plus</a>
- </div>
+  <div>
+    <h1>Muffins à la myrtille</h1>
+    <p>Par Ôdélices</p>
+  </div>
 ```
 Il faut en suite ajouter le CSS associé pour modifier le style du cadre :
 
 #### CSS
 ```css
 div {
- background: lightgreen;
+ background: darkblue;
 }
 
 ```
