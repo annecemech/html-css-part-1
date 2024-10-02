@@ -8,10 +8,6 @@ Les diapositives du 1er cours sont disponibles à l'adresse suivante :
 <a href="https://docs.google.com/presentation/d/e/2PACX-1vS8hxL-8XySCIGKGnqwe2PSby6in_BGWfeDy5O-UahiQ1P_Csd4UmspQFdWydiFk6kU4ioJLxd_9S3a/pub?start=false&loop=false&delayms=3000" target="_blanck">
 Cours 1</a>
 
-La structure du code peut être retrouvée dans le fichier <a href="https://github.com/Joz84/day-a.github.io/blob/master/index.html" target="_blanck">index.html<a>.
-
-Et l'ensemble des propriétés dans le fichier <a href="https://github.com/Joz84/day-a.github.io/blob/master/style.css" target="_blanck">style.css<a>
-
 ## Les outils
 
 <img src="readme-images/tools-logos.png" alt="tools">
