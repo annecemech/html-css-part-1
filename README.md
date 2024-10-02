@@ -2,7 +2,7 @@
 
 ### <a href="https://github.com/Joz84/ten-hours-of-html-css" target="_blank">Retour au menu principal</a>
 
-## Lien vers la <a href="https://joz84.github.io/day-b.github.io/" target="_blank">démo</a>
+## Lien vers la <a href="https://annecemech.github.io/html-css-part-2/" target="_blank">démo</a>
 
 ## Les divisions
 ### Le cadre
