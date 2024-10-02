@@ -1,7 +1,3 @@
-/*light: #F9F8F4
-green: #1C232F
-dark-green: #886176*/
-
 body {
   margin: 0;
   background-color: #F9F8F4;
@@ -9,8 +5,11 @@ body {
   color: #1C232F;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: "Manrope", sans-serif;
+}
+
+h1 {
   font-size: 64px;
   margin: 0px;
   text-transform: uppercase;
@@ -18,7 +17,6 @@ h1 {
 }
 
 h2, h3 {
-  font-family: "Manrope", sans-serif;
   color: #1C232F;
 }
 
@@ -38,18 +36,12 @@ p, li {
   line-height: 1.5em;
 }
 
-
 #recipe-image {
   width: 100%;
   height: 400px;
   object-fit: cover;
   display: block;
 }
-
-h3, ul, ol {
-  text-align: left;
-}
-
 
 ul.list-inline li {
   display: inline;
@@ -82,36 +74,44 @@ ul.list-inline li {
   border-radius: 2px;
   padding: 0.5em 1em;
 }
+
 .mr-1em {
   margin-right: 1em;
 }
+
 .container {
   width: 1140px;
   margin: 0 auto;
 }
+
 .card {
   background-color: #FFFFFF;
   border-radius: 2px;
   padding: 2rem;
 }
+
 .my-2rem {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
 .my-4rem {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
+
 .py-2rem {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+
 .btn {
   display: inline-block;
   border-radius: 2px;
   padding: 1rem 2rem;
   font-weight: 600;
 }
+
 .btn-primary {
   border: solid 2px #886176;
   color: #886176;
