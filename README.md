@@ -1,314 +1,220 @@
-# Jour 2
+# Jour 1 - HTML & CSS - Partie 2
 
 ### <a href="https://github.com/Joz84/ten-hours-of-html-css" target="_blank">Retour au menu principal</a>
 
 ## Lien vers la <a href="https://annecemech.github.io/html-css-part-2/" target="_blank">démo</a>
 
 ## Les divisions
-### Le cadre
-Nous souhaitons encadrer le titre principal avec un bleu foncé. Pour cela nous avons besoin d'une nouvelle balise : la balise division ```<div></div>```. Par exemple pour cette section :
 
-#### HTML (l.10-16)
+### Le titre principal
+
+Nous souhaitons encadrer le titre principal avec un bleu foncé. Pour cela nous avons besoin d'une nouvelle balise : la balise division `<div></div>`. Par exemple pour cette section :
+
+#### HTML
+
 ```html
-  <div>
-    <h1>Muffins à la myrtille</h1>
-    <p>Par Ôdélices</p>
-  </div>
+<div>
+	<h1>Muffins à la myrtille</h1>
+	<p>Par Ôdélices</p>
+</div>
 ```
+
 Il faut en suite ajouter le CSS associé pour modifier le style du cadre :
 
 #### CSS
+
 ```css
 div {
- background: darkblue;
+	background: #1c232f;
 }
-
 ```
 
-## Exercice
-Encadrer les autres sections avec la balise ```<div>``` pour que celles-ci soient également cadrées comme présenté sur l'image ci dessous :
-<img src="images-readme/cadres.png" alt="cadres">
+## Exercice - Les cards sur fond blanc
+
+Encadrer les autres sections avec la balise `<div>` pour que celles-ci soient également cadrées comme présenté sur l'image ci dessous :
+<img src="readme-images/card-white.png" alt="cadres">
+
+Problème, comment faire pour donner un fond blanc à ces div alors que les précédentes ont un fond gris ?
 
 ## Les classes
-Pour illustrer cette notion nous allons ajouter une section intitulée "Vos productions" sur notre site web. Cette section présente 3 images que l'on a téléchargé et renommé dans le dossier "images". On souhaite modifier le style de ces images pour qu'elles soient plutot rectangulaires.
 
-#### HTML (l.74-79)
+Pour résoudre ce problème nous allons ajouter des classes aux divs que nous souhaitons voir comme des cartes blanches. Par exemple :
+
 ```html
-  <div>
-    <h3>Vos productions</h3>
-    <img src="images/production1.jpg">
-    <img src="images/production2.jpg">
-    <img src="images/production3.jpg">
-  </div>
-```
-
-#### CSS
-```css
-img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-}
-```
-Ceci a bien redimentionné les 3 photos mais malheureusement cela a aussi modifié la photo de la 1ère section qui à l'origine été carrée.
-
-Alors comment faire ?
-
-La solution est de "nommer" les images et d'associer le style à ces "noms" plutôt qu'au tag ```<img>```. Ces "noms" sont appellé "class" en HTML. Ainsi les lignes précédentes deviennent :
-
-#### HTML (l.13)
-```html
- <img src="images/muffin.jpg" alt="muffin" class="avatar">
-```
-
-#### HTML (l.74-79)
-```html
-  <div>
-    <h3>Vos productions</h3>
-    <img src="images/production1.jpg" class="production">
-    <img src="images/production2.jpg" class="production">
-    <img src="images/production3.jpg" class="production">
-  </div>
-```
-
-Dans le fichier CSS, pour retrouver les images par rapport à leurs classes "avatar" et "production" plutôt que par rapport à leur tag ```<img>```, il suffit d'écrire :
-
-#### CSS
-```css
-.avatar {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.production {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-}
-```
-
-Les points "." devant les mots "avatar" et "production" sont là pour indiquer au navigateur qu'il doit chercher des classes et non plus un tag.
-
-## Corrections du code précédent
-* On créer une classe ".cadre" que l'on associe à toutes les div comportant un cadre (pour le moment c'est le cas de toutes).
-* On créer des classes pour modifier la position du text (.text-center, et .text-left).
-* On créer des une classe pour changer la couleur de la police en vert (.color-green).
-* On commente toutes les propriétés devenues inutiles.
-
-<i>Remarque :</i> les symboles ```/*...*/``` permet de mettre les lignes en commentaires. Cela veut dire qu'elles ne seront pas vues par le navigateur.  
-
-#### HTML (l.9)
-```html
-<body class="text-center">
- ...
-</body>
-```
-
-#### HTML (l.10-12)  
-```html
-<div class="cadre">
-  <h1 class="color-green">Les Muffins de Grand Mère</h1>
-  <h2 class="color-green">Fondants et croustillants</h2>
-  ...
-</div>
-```
-
-#### HTML (l.18-19, 27-28, 74-75)
-```html
-<div class="cadre">
- <h3 class="color-green">...</h3>
- ...
-</div>
-```
-
-#### HTML (l.32-33, 48-49)
-```html
-<div class="cadre text-left">
-  <h4  class="color-green">Ingredients</h4>
-  ...
+<div class="card">
+	<h2>La recette en vidéo</h2>
+	<iframe
+		width="560"
+		height="315"
+		src="https://www.youtube-nocookie.com/embed/PFpUJWOh8Vk?si=UYUKWs6tr4fZp4pf&amp;controls=0"
+		title="YouTube video player"
+		frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		referrerpolicy="strict-origin-when-cross-origin"
+		allowfullscreen
+	></iframe>
 </div>
 ```
 
 #### CSS
-```css
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.color-green {
-  color: green;
-}
-
-.cadre {
-background: lightgreen;
-}
-
-h1 {
-  /*color: green;*/
-  font-family: 'Pacifico', cursive;
-  font-size: 32px;
-}
-
-h2, h3, h4 {
-  /*color: green;*/
-  font-family: 'Pacifico', cursive;
-  font-size: 28px;
-}
-
-/*img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-}*/
-
-/*h4, ul, ol {
-  text-align: left;
-}*/
-
-/*div {
-background: lightgreen;
-}*/
-```
-
-## Définir une palette de couleurs plus large
-
-### Les différentes notations des couleurs
-Il existe 4 manières différentes de définir une couleur :
-* Le nom mais le nombre de couleur est limité, exemple: "pink".
-* Le code exadecimal
-* Le code rgb (red, green, blue)
-* Le code rgba (red, green, blue, transparence). Le dernier paramètre varie entre 0 et 1 et permet de gérer la transparence.
 
 ```css
-body {
- background: pink;
- background: #FFC0CB;
- background: rgb(255, 192, 203);
- background: rgba(255, 192, 203, 0.2);
-}
-
-.color-green {
-  color: green;
-  color: #008000;
-  color: rgb(0, 128, 0);
-  color: rgba(0, 128, 0, 0.8);
+.card {
+	background: #ffffff;
 }
 ```
-<i>Remarque :</i> Pour obtenir différentes teintes de gris, il suffit d'utiliser le code rgb avec 3 fois le même nombre. Par exemple : color: rgb(125, 125, 125);
 
-### Les générateurs de palette de couleurs 
-* https://paletton.com/
-* https://colorhunt.co/
-* https://coolors.co/
-* https://www.colourlovers.com/
-* https://www.colorzilla.com/
-* <a href="https://graphiste.com/blog/choisir-palette-couleurs" target="_blank">10 liens</a>
+Cela a bien appliqué un background blanc uniquement aux div qui portent cette classe.
 
-### Les générateurs de gradients
-* https://uigradients.com/
-* https://webgradients.com/
-* https://cssgradient.io/
-* https://www.colorzilla.com/gradient-editor/
+Problème, si j'ajoute une nouvelle div, sans classe, celle-ci aura un fond gris foncé car c'est comme cela que je l'ai défini juste au dessus. Pour résoudre ce problème, je vais venir ajouter une classe à mon titre principal.
 
-### Les générateurs de background SVG
-* https://www.svgbackgrounds.com/
-* https://www.heropatterns.com/
-* <a href="https://bashooka.com/coding/15-svg-css-background-pattern-resources/" target="_blank">15 liens</a>
+```html
+<div class="header">
+	<h1>Muffins à la myrtille</h1>
+	<p class="subtitle">Par Ôdélices</p>
+</div>
+```
 
-### Armoniser les images avec les couleurs
-* <a href="http://labs.tineye.com/multicolr/" target="_blank">labs.tineye.com</a>
-* http://www.colr.org/
+```css
+.header {
+	background: #1c232f;
+}
+```
 
-### Modification des couleurs dans le fichier CSS
+Je veux maintenant donner au contenu de mon site une largeur fixe et faire en sorte qu'il soit centré dans la page. Pour cela je vais créer un container. J'ajoute une div qui engloble l'ensemble des éléments à "contenir" et je lui donne la classe 'container'.
+
+#### HTML
+
+```html
+<div class="container">
+	...
+	<div class="card">
+		<h2>Présentation</h2>
+		<ul>
+			...
+		</ul>
+	</div>
+	<div class="card">
+		<h2>Préparation</h2>
+		<ol>
+			...
+		</ol>
+	</div>
+	...
+</div>
+```
 
 #### CSS
-```css
-body {
-  background: #ee9ca7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  ...
-}
-.cadre {
-  background: #E2F3DC;
-}
 
-.color-green {
-  color: #458D2E;
+```css
+.container {
+	width: 1140px;
+	margin: 0 auto;
 }
 ```
 
-## De nouvelles propriétés CSS
-
-Les propriétés présentées ici permettent de modifier les marges interieures et exterieures les arrondis des angles les contours et les ombres d'une box. Nous prendrons comme exemple la box ".cadre".
-
-### Définitions des propriétés
-* border: les contours
-* margin: marges extérieures
-* padding: marges intérieurs
-* border-radius: l'arrondi des angles
-* box-shaddow: l'ombre portée
-
-<img src="images-readme/boxmodel.png" alt="boxmodel">
-
-### Modification de ces propriétés dans le fichier CSS
-
-#### CSS
-```css
-.cadre {
-  background: #E2F3DC;
-  border: 3px solid #C1E6B6;
-  margin: 20px 100px;
-  padding: 30px 70px;
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px grey;
-}
-
-.avatar {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 5px 5px 10px grey;
-}
-
-.production {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 3px;
-  box-shadow: 2px 2px 10px grey;
-  margin: 10px;
-}
-```
+Je donne à l'élément une largeur fixe (width), et pour le centrer l'élément horizontalement je lui donne une marge de 0 en haut et en bas et auto à gauche et à droite.
 
 ### Mise en forme du bouton
 
-#### HTML (l.15)
-```html
-  <a href="https://www.marmiton.org/recettes/recette_muffins-tres-simples_166385.aspx" target="_blank" class="btn-pink">En savoir plus</a>
+#### HTML
 
+```html
+<a href="https://odelices.ouest-france.fr/recette/muffins-aux-myrtilles-r107/" target="_blank" class="btn-primary">
+	En savoir plus
+</a>
 ```
+
 #### CSS
 
 ```css
-.btn-pink {
-  display: inline-block;
-  color: white;
-  background: #C86472;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 5px;
-  font-weight: bold;
+.btn-primary {
+	display: inline-block;
+	border-radius: 2px;
+	padding: 1rem 2rem;
+	font-weight: 600;
+	border: solid 2px #886176;
+	color: #886176;
+	transition: all 0.3s;
 }
 
-.btn-pink:hover {
-  color: white;
-  opacity: 0.8;
+.btn-primary:hover {
+	color: #f9f8f4;
+	background-color: #886176;
+	transition: all 0.3s;
+}
+```
+
+### Mise en forme de l'image de la recette
+
+Actuellement, l'image est trop grande, je vais donc lui donner une largeur de 100% et une hauteur de 400px. Pour venir cibler cette image, j'utilise un id, car ces propriétés css ne seront pas valables que pour cette image du site.
+
+#### HTML
+
+```html
+<img id="recipe-image" src="images/blueberry-muffin.jpg" alt="photo de muffins à la myrtilles avec couteau" />
+```
+
+#### CSS
+
+```css
+#recipe-image {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	display: block;
+}
+```
+
+La propriété object-fit: cover; permet de conserver les proportions de l'image tout en la redimensionnant pour qu'elle couvre toute la surface de l'élément.
+
+La propriété display: block; permet de supprimer l'espace vide en dessous de l'image.
+
+### Mise en forme des badges 'difficulté', 'temps de préparation' et 'temps de cuisson'
+
+Pour pouvoir venir appliquer une mise en forme spécifique à ces éléments, je vais venir les encadrer d'une balise `<span>` et leur donner une classe.
+
+#### HTML
+
+```html
+<li>
+	<span class="badge background-secondary">Difficulté</span>
+	Très facile
+</li>
+```
+
+#### CSS
+
+```css
+.badge {
+	background-color: #886176;
+	color: #f9f8f4;
+	border-radius: 2px;
+	padding: 0.5em 1em;
+}
+```
+
+### Finalisation de la mise en forme avec les classes utilitaires
+
+Pour finaliser l'intégration de ma page, j'ai besoin de quelques classes utilitaires pour espacer les éléments, centrer les contenus... Ces classes ne contiennent qu'une seule propriété css et ont pour but de simplifier le code et de rendre le site plus facile à maintenir, par exemple :
+
+#### CSS
+
+```css
+.list-inline li {
+	display: inline;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.mr-1em {
+	margin-right: 1em;
+}
+
+.my-2rem {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 ```
