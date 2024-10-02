@@ -1,7 +1,5 @@
 # Jour 1 - HTML & CSS - Partie 1
 
-### <a href="https://github.com/Joz84/ten-hours-of-html-css" target="_blank">Retour au menu principal</a>
-
 ## Le lien vers la <a href="https://annecemech.github.io/html-css-part-1/" target="_blanck">démo</a>
 
 ## Les autres liens utiles
