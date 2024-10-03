@@ -220,11 +220,7 @@ Une balise peut être constituée de 4 parties :
 La balise pour lier deux pages est la balise "a".
 
 ```html
-<a
-	href="https://odelices.ouest-france.fr/recette/muffins-aux-myrtilles-r107/"
-	target="_blank"
-	class="btn btn-primary my-2rem"
-></a>
+<a href="https://odelices.ouest-france.fr/recette/muffins-aux-myrtilles-r107/" target="_blank">En savoir plus</a>
 ```
 
 ### Les images
